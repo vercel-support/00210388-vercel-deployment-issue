@@ -1,0 +1,35 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+**/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+dist
+
+*.tsbuildinfo
+
+packages/app-executor/bin/executor-bundle.js
+packages/app-executor/bin/executor-bundle.cjs
+
+.turbo
+
+.idea
+
+packages/app/stats.html
+**/.next
+**/*.env

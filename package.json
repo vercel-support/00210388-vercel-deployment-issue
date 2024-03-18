@@ -1,0 +1,52 @@
+{
+  "name": "@lawme/main",
+  "license": "MIT",
+  "repository": "https://github.com/lawme/workflows",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "start": "turbo start",
+    "dev:app": "pnpm run --filter @lawme/app dev",
+    "dev:server": "pnpm run --filter @lawme/server dev",
+    "build": "turbo build",
+    "build:app": "turbo build --filter @lawme/app",
+    "build:server": "turbo build --filter @lawme/server",
+    "build:core": "turbo build --filter @lawme/core",
+    "test": "pnpm test --filter @lawme/app",
+    "lint": "turbo lint",
+    "prettier": "prettier --write ./packages",
+    "husky": "husky install"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.3.94",
+    "@types/eslint": "^8.44.6",
+    "@types/node": "^20.8.7",
+    "@types/stylis": "^4",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "esbuild": "^0.19.5",
+    "eslint": "^8.52.0",
+    "eslint-config-standard-with-typescript": "^39.1.1",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "npm:eslint-plugin-i@latest",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "turbo": "^1.12.4",
+    "typescript": "^5.3.3"
+  },
+  "resolutions": {
+    "jest-mock": "^28.1.0",
+    "@types/react": "18.2.31",
+    "esbuild": "0.19.5"
+  },
+  "volta": {
+    "node": "21.6.2"
+  }
+}

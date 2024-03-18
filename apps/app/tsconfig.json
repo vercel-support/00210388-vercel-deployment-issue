@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "typeRoots": ["./node_modules/@types", "../../node_modules/@types"],
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    // "types": ["@types/wicg-file-system-access"],
+    "incremental": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/lawme/*": ["packages/*"],
+      "@/core/*": ["../../packages/core/src/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "src",
+    "./packages/**/*.ts",
+    "./packages/**/*.tsx",
+    ".next/types/**/*.ts",
+    "./dist/types/**/*.ts",
+    "./next-env.d.ts"
+, "index.d.ts"  ],
+  "exclude": ["./node_modules", "**/node_modules"],
+  "references": [
+    {
+      "path": "../../packages/core"
+    }
+  ]
+}
