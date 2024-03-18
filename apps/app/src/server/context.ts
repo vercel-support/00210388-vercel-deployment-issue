@@ -1,5 +1,4 @@
 import type { NextRequest } from 'next/server';
-import type { Stripe } from 'stripe';
 import { getAuth } from '@clerk/nextjs/server';
 import type { SignedInAuthObject, SignedOutAuthObject } from '@clerk/nextjs/server';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
@@ -11,7 +10,6 @@ type CreateContextOptions = {
 
 export type Context = {
   db: PostgresJsDatabase;
-  stripe: Stripe;
   auth: SignedInAuthObject | SignedOutAuthObject;
   req: NextRequest | null;
 };
