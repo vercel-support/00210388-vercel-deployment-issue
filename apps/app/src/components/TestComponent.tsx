@@ -1,6 +1,6 @@
 import { coreFunction } from "@lawme/core"
 
-export default function appFunction() {
+export default function TestComponent() {
   return <div>
     {coreFunction()}
   </div>
