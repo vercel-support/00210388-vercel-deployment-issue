@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "typeRoots": ["./node_modules/@types"],
+    "allowSyntheticDefaultImports": false,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "isolatedModules": true,
+    "noUncheckedIndexedAccess": true,
+    "declaration": false,
+    "verbatimModuleSyntax": true,
+    "emitDecoratorMetadata": false,
+    "outDir": "dist/esm",
+    "rootDir": "src",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src", "index.d.ts"],
+  "ts-node": {
+    "compiler": "typescript",
+    "experimentalResolver": true,
+    "experimentalSpecifierResolution": "node",
+    "compilerOptions": {}
+  },
+  "references": [{ "path": "../../packages/core" }]
+}
